@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="df1-7S-39F">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-Sa-DFS">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
+                                        <color key="backgroundColor" red="0.54692543721787357" green="0.064266606992545369" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Change Color">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeBGColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jz-8s-xA3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-lP-bT1">
+                                        <rect key="frame" x="187" y="0.0" width="186" height="30"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.1764705882" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Move">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moveCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qo3-Vr-a9o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-r0-h5l">
+                                        <rect key="frame" x="373" y="0.0" width="187" height="30"/>
+                                        <color key="backgroundColor" red="0.18300813499816707" green="0.88210520535132242" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPe-ZO-PvU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fU1-CJ-1uh" customClass="MyView">
+                                <rect key="frame" x="20" y="50" width="560" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fU1-CJ-1uh" secondAttribute="trailing" id="KhZ-9x-RAd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="df1-7S-39F" secondAttribute="trailing" id="MKO-5V-ZVh"/>
+                            <constraint firstItem="df1-7S-39F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nvF-tZ-KKA"/>
+                            <constraint firstItem="df1-7S-39F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:20" id="qHg-2s-gAK"/>
+                            <constraint firstItem="fU1-CJ-1uh" firstAttribute="top" secondItem="df1-7S-39F" secondAttribute="bottom" constant="10" id="qzq-pY-qXJ"/>
+                            <constraint firstItem="fU1-CJ-1uh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s6F-wH-uQm"/>
+                            <constraint firstItem="fU1-CJ-1uh" firstAttribute="top" secondItem="df1-7S-39F" secondAttribute="bottom" id="xBE-48-161"/>
+                            <constraint firstItem="df1-7S-39F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xYE-Ko-vij"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fU1-CJ-1uh" secondAttribute="bottom" id="yv5-w4-ceY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qzq-pY-qXJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="fU1-CJ-1uh" id="APO-lh-TgH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
